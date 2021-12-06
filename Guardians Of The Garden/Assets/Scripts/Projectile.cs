@@ -14,6 +14,12 @@ public class Projectile : MonoBehaviour
     {
         //With collision of zucchini health will get down (-50) until destroy the object
         var health = otherCollider.GetComponent<Health>();
-        health.DealDamage(damage);
+        var attacker = otherCollider.GetComponent<Attacker>();
+
+        if(attacker && health)
+        {
+            health.DealDamage(damage);
+            Destroy(gameObject);
+        }
     }
 }
