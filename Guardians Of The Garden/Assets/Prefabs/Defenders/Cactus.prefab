@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9161893268146993401}
   - component: {fileID: 2509948123693527409}
+  - component: {fileID: 1985583957}
+  - component: {fileID: 1985583958}
+  - component: {fileID: 696151034}
   m_Layer: 0
   m_Name: Cactus
   m_TagString: Untagged
@@ -26,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8051365926840277223}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.016385593, y: 0.057479143, z: -281.191}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 8216336663595018497}
   m_Father: {fileID: 0}
@@ -44,7 +47,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fca67551d50c704dad35f088eabdc6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starCost: 100
+  starCost: 50
+--- !u!95 &1985583957
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8051365926840277223}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 379a2bb5fef708c40b44f44be6219658, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1985583958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8051365926840277223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfafedb23763ead4bba9990f8bceede5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 1149155225467523422, guid: e98d1bfcf05aeb84aaf8a65802d71321, type: 3}
+  gun: {fileID: 8216336663736410170}
+--- !u!114 &696151034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8051365926840277223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abaefbdc68218fa4c84be7ee0287186e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 75
+  deathVFX: {fileID: 0}
 --- !u!1 &8216336663595018509
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,7 +237,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8216336663736410170}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.622, y: -0.066, z: -282.2868}
+  m_LocalPosition: {x: -0.521, y: -0.066, z: -282.2868}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8216336663595018497}
