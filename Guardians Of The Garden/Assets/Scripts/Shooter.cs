@@ -18,12 +18,12 @@ public class Shooter : MonoBehaviour
         if(IsAttackerInLane())
         {
             //to do change animation state to shooting
-            animator.SetBool("isAttacking", true);
+            animator.SetBool("IsAttacking", true);
         }
         else
         {
             //to do change animation state to idle
-            animator.SetBool("isAttacking", false);
+            animator.SetBool("IsAttacking", false);
         }
     }
     private void SetLaneSpawner()

@@ -19,7 +19,7 @@ public class LevelLoader : MonoBehaviour
     }
     IEnumerator WaitForTime()
     {
-        yield return new WaitForSeconds(timeToWait);
+        yield return new WaitForSecondsRealtime(timeToWait); 
         LoadNextScene();
     }
     public void LoadNextScene()
@@ -27,10 +27,8 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
-
-    // Update is called once per frame
-    void Update()
+    public void LoadGameOver()
     {
-        
+        SceneManager.LoadScene(3);
     }
 }
