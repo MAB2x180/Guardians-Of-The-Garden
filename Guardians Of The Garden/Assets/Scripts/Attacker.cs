@@ -16,7 +16,12 @@ public class Attacker : MonoBehaviour
 
     private void OnDestroy()
     {
-        FindObjectOfType<GameManager>().AttackerKilled();
+        GameManager gameManager = FindObjectOfType<GameManager>();
+
+        if(gameManager != null)
+        {
+            gameManager.AttackerKilled();
+        }
     }
     void Update()
     {

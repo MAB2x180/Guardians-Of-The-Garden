@@ -26,7 +26,8 @@ public class PlayerLives : MonoBehaviour
 
         if(playerLives <= 0)
         {
-            FindObjectOfType<LevelLoader>().LoadGameOver();
+            FindObjectOfType<GameManager>().HandleLoseCondition();
+            //FindObjectOfType<LevelLoader>().LoadGameOver();
         }
     }
 }
